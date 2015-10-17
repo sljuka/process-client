@@ -1,0 +1,46 @@
+{
+  "processes": {
+    "make_breakfast": {
+      "id": 1,
+      "name": "make_breakfast",
+      "instances": [
+        {
+          "id": 1,
+          "name": "make_breakfast",
+          "version": "0.0.1"
+        },
+        {
+          "id": 2,
+          "name": "make_breakfast",
+          "version": "0.0.1"
+        },
+        {
+          "id": 3,
+          "name": "make_breakfast",
+          "version": "0.0.2"
+        }
+      ]
+    },
+    "make_dinner": {
+      "id": 2,
+      "name": "make_dinner",
+      "instances": [
+        {
+          "id": 1,
+          "name": "make_dinner",
+          "version": "0.0.1"
+        },
+        {
+          "id": 2,
+          "name": "make_dinner",
+          "version": "0.0.1"
+        },
+        {
+          "id": 3,
+          "name": "make_dinner",
+          "version": "0.0.2"
+        }
+      ]
+    }
+  }
+}

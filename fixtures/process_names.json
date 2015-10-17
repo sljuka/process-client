@@ -1,0 +1,24 @@
+{
+  "process_names": [
+    {
+      "name": "make_breakfast",
+      "id": 1
+    },
+    {
+      "name": "sample_process",
+      "id": 2
+    },
+    {
+      "name": "destroy_terminator",
+      "id": 3
+    },
+    {
+      "name": "travel_to_mars",
+      "id": 4
+    },
+    {
+      "name": "make_cure_for_peanut_allergy",
+      "id": 5
+    }
+  ]
+}

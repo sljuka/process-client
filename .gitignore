@@ -1,0 +1,9 @@
+.DS_Store
+bower_components
+build
+node_modules
+npm-debug.log
+*.sublime-workspace
+newrelic_agent.log
+tests/reports
+tests/screenshots
