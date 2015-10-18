@@ -1,4 +1,4 @@
-import {List, Map} from 'immutable'
+import {List} from 'immutable'
 
 export const MAX_OPENED_PROCESSES = 6
 

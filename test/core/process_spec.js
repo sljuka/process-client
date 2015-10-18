@@ -103,7 +103,7 @@ describe('process application logic', () => {
         }
       }
       const nextState = fetchProcessesSuccess(processState, entry)
-      expect(deepEqual(nextState, Map({
+      const expectedValue = {
         processes: {
           process_1: {
             id:   1,
@@ -114,7 +114,8 @@ describe('process application logic', () => {
             name: 'process_2'
           }
         }
-      })))
+      }
+      expect(nextState.toJS()).to.deep.equal(expectedValue)
     })
   })
 })
