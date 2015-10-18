@@ -1,4 +1,4 @@
-import {List} from 'immutable'
+import {List, Map} from 'immutable'
 
 export const MAX_OPENED_PROCESSES = 6
 
@@ -20,7 +20,11 @@ export function closeProcess(processState, id) {
     const indexOfId = processes.indexOf(id)
     if (indexOfId !== -1)
       processes = processes.remove(indexOfId)
-    
+
     return processes
   })
+}
+
+export function fetchProcessesSuccess(processState, fetched) {
+  return processState.set('processes', fetched)
 }

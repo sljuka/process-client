@@ -1,6 +1,8 @@
+/* eslint-disable no-undef, camelcase */
+
 import {expect} from 'chai'
-import {List, Map} from 'immutable'
-import {openProcess, closeProcess, MAX_OPENED_PROCESSES} from '../../src/core/process'
+import {List, Map, is as deepEqual} from 'immutable'
+import {openProcess, closeProcess, fetchProcessesSuccess, MAX_OPENED_PROCESSES} from '../../src/core/process'
 
 describe('process application logic', () => {
 
@@ -84,7 +86,35 @@ describe('process application logic', () => {
         opened: List.of(1, 2, 3, 4)
       }))
     })
-
   })
 
+  describe('fetchProcessesSuccess function', () => {
+
+    it('merges the fetched processes to the existing process info pool', () => {
+      const processState = Map()
+      const entry = {
+        process_1: {
+          id:   1,
+          name: 'process_1'
+        },
+        process_2: {
+          id:   2,
+          name: 'process_2'
+        }
+      }
+      const nextState = fetchProcessesSuccess(processState, entry)
+      expect(deepEqual(nextState, Map({
+        processes: {
+          process_1: {
+            id:   1,
+            name: 'process_1'
+          },
+          process_2: {
+            id:   2,
+            name: 'process_2'
+          }
+        }
+      })))
+    })
+  })
 })
