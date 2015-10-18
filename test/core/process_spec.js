@@ -1,7 +1,7 @@
 /* eslint-disable no-undef, camelcase */
 
 import {expect} from 'chai'
-import {List, Map, is as deepEqual} from 'immutable'
+import {List, Map} from 'immutable'
 import {openProcess, closeProcess, fetchProcessesSuccess, MAX_OPENED_PROCESSES} from '../../src/core/process'
 
 describe('process application logic', () => {
